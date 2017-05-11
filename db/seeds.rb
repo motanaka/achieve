@@ -18,8 +18,8 @@ end
 n = 1
 while n <= 100
   Blog.create(
-    title: "test-title",
-    content: "test-content",
+    title: "test_title",
+    content: "test_content",
     user_id: n
   )
   n = n + 1
