@@ -50,3 +50,4 @@ gem 'jquery-turbolinks'
 
 gem 'devise'
 
+gem 'faker'
