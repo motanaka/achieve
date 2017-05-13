@@ -5,6 +5,7 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_blog.subject
   #
+  
   def sendmail_blog(blog)
     @blog = blog
 
