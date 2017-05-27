@@ -32,18 +32,15 @@
   </div>
   
   <div class="field">
-    <%= f.label :現在のパスワード %><br />
-    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "現パスワード" %>
   </div>
-
   <div class="field">
     <%= profile_img(@user) if profile_img(@user) %>
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %>
   </div>
-
   <div class="actions">
-    <%= f.submit "更新", class: "btn btn-primary btn-block" %>
+    <%= f.submit "アップロード", class: "btn btn-primary btn-block" %>
   </div>
 
   <% end %>
@@ -78,5 +75,4 @@
   </div>
 
 <% end %>
-
 </div>
