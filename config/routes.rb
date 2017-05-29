@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :blogs do
+    resources :comments
+    post :confirm, on: :collection
+  end
+  
   resources :contacts, only: [:new, :create] do
    collection do
       post :confirm
