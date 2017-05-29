@@ -19,38 +19,32 @@
       <% end %>
 
       <div class="field">
-        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "新パスワード（変更時：6文字以上）" %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "新パスワード（変更：6文字以上）" %>
       </div>
       <div class="field">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "新パスワード（確認用）" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "新パスワード（確認）" %>
       </div>
-      <BR>
+      <div class="field">
+        <%= profile_img(@user) if profile_img(@user) %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+      </div>
+      <br>
       <div class="field">
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "現パスワード" %>
       </div>    
       <div class="actions">
         <%= f.submit "更新", class: "btn btn-primary btn-block" %>
       </div>
-      <div class="field">
-      </div>
     <% end %>
-    
-    <%= profile_img(@user) if profile_img(@user) %>
-    <%= f.file_field :avatar %>
-    <%= f.hidden_field :avatar_cache %>
-
-    <div class="actions">
-      <%= f.submit "アップロード", class: "btn btn-primary btn-block" %>
-    </div>
-    <BR>
+  <% end %>
+  
 　  <h2>アカウント情報の削除</h2>
     <%= button_to "削除", registration_path(resource_name), data: { confirm: "本当に削除しますか？" }, method: :delete, class: "btn btn-primary btn-block"   %>
   
     <%= link_to "Back", :back %>
     <br>
     <%= render "devise/shared/links" %>
-
-  <% end %>
 
   </div>
 </div>
