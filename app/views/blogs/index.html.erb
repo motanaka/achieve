@@ -6,7 +6,9 @@
     <% @blogs.each do |blog| %>
     <div class="row">
       <p><%= blog.user_id %> : <%= blog.user.name %> : <%= blog.user.email %></p>
-
+      <div class="field">
+        <%= profile_img(blog.user) if profile_img(blog.user) %>
+      </div>
   
       <p><%= blog.title %></p>
       <p><%= blog.content %></p>
