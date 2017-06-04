@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
-    collection do
-      post :confirm
-    end
-  end
+#  resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
+#    collection do
+#      post :confirm
+#    end
+#  end
   
   resources :blogs do
     resources :comments
