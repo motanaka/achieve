@@ -10,7 +10,6 @@
         <%= profile_img(blog.user) if profile_img(blog.user) %>
       </div>
       
-      # ブログのタイトルにlink_toでリンクを設定します。
       <%= link_to blog_path(blog) do %>
       <p><%= blog.title %></p>
       <% end %>
