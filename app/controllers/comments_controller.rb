@@ -16,10 +16,11 @@ class CommentsController < ApplicationController
   end
   
   def destroy
-    @comment = current_user.comments.build(comment_params)
-    @comment.destroy
-    redirect_to blogs_path, notice: "コメントを削除しました！"
-    format.js { render :destroy }
+    respond_to do |format|
+       @comment = Comment.find(params[:id])
+       @comment.destroy
+       format.js { render :destroy }
+    end
   end
 
   private
