@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   get 'relationships/destroy'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
-  resources :users, only: [:index]
   resources :relationships, only: [:create, :destroy]
   
   resources :blogs do
@@ -29,6 +27,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
+  resources :users, only: [:index, :show]
   
   root 'top#index'
   
