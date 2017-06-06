@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+
+  get 'relationships/destroy'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-#  resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
-#    collection do
-#      post :confirm
-#    end
-#  end
+  resources :users, only: [:index]
+  resources :relationships, only: [:create, :destroy]
   
   resources :blogs do
     resources :comments
