@@ -6,7 +6,6 @@
         <%= link_to user_path(user) do %>
            <p><%= user.name %></p>
         <% end %>
-        <p><%= user.email %></p>
         <%= render 'follow_form', user: user %>
         <br>
       </div>
