@@ -1,0 +1,6 @@
+<%= form_for(@user) do |f| %>
+   <% @followed=@user.followed_users %>
+   <% @followed.each do |followed| %>
+      <p class="left"><%= followed.name %></p> : <%= followed.email %></p>
+   <% end %>
+<% end %>

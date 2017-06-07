@@ -12,19 +12,11 @@
       </p>
     </div>
     
-    <p>ユーザ詳細</p>
-    <p>
-      <strong>フォローユーザー:</strong>
-      <%= @follower.name %>
-      <%= @follower.email %>
-    </p>
-　　<p>
-      <strong>フォロワーユーザー:</strong>>
-  　　<%= @followed.name %>
-      <%= @followed.email %>
-　　</p>
-    
-
+    <p>フォロー状況</p>
+    <p>フォロワー・ユーザー</p>    
+        <%= render partial: 'users/follower', locals: { user: @user } %>
+    <p>フォロード・ユーザー</p>   
+        <%= render partial: 'users/followed', locals: { user: @user } %>
     <%= link_to '戻る', users_path %>
   </div>
 </div>
