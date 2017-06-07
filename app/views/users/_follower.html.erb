@@ -1,6 +1,7 @@
 <%= form_for(@user) do |f| %>
    <% @followers=@user.followers %>
    <% @followers.each do |follower| %>
-      <p class="left"><%= follower.name %> : <%= follower.email %></p>
+         <p class="center"><%= follower.name %></p>
+         <p class="center"><%= profile_img(follower) %></p>
    <% end %>
 <% end %>

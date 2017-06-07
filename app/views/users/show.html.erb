@@ -13,10 +13,15 @@
     </div>
     
     <p>フォロー状況</p>
-    <p>フォロワー・ユーザー</p>    
-        <%= render partial: 'users/follower', locals: { user: @user } %>
-    <p>フォロード・ユーザー</p>   
-        <%= render partial: 'users/followed', locals: { user: @user } %>
+    <dv>
+       <p>フォロワー・ユーザー</p>    
+       <%= render partial: 'users/follower', locals: { user: @user } %>
+    </dv>
+    <br>
+    <dv>
+       <p>フォロード・ユーザー</p>   
+       <%= render partial: 'users/followed', locals: { user: @user } %>
+    </dv>
     <%= link_to '戻る', users_path %>
   </div>
 </div>
