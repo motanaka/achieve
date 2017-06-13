@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'relationships/create'
 
+  get 'notifications/index'
+
+  get 'relationships/create'
   get 'relationships/destroy'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -28,6 +30,10 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
   resources :users, only: [:index, :show]
+  
+  resources :conversations do
+     resources :messages
+  end
   
   root 'top#index'
   
