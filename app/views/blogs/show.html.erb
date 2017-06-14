@@ -16,9 +16,11 @@
       <%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog } %>
     </div>
     <%= render partial: 'comments/form', locals: { comment: @comment, blog: @blog } %>
+    <br>
     <% if current_user.id == @blog.user_id %>
-      <%= link_to '編集', edit_blog_path(@blog) %> |
+      <%= link_to 'ブログ編集', edit_blog_path(@blog) %> |
     <% end %>
-    <%= link_to '戻る', blogs_path %>
+    <%= link_to 'ブログ一覧', blogs_path %> |
+    <%= link_to '通知一覧', notifications_index_path %>
   </div>
 </div>

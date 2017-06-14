@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+    def current_notifications
+      @notifications = Notification.where(user_id: current_user.id).where(read: false).order(created_at: :desc)
+    end
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: PERMISSIBLE_ATTRIBUTES)
       devise_parameter_sanitizer.permit(:account_update, keys: PERMISSIBLE_ATTRIBUTES)
-    end
-    def current_notifications
-      @notifications = Notification.where(user_id: current_user.id).where(read: false).order(created_at: :desc)
     end
 end
