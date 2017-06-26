@@ -73,3 +73,5 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'pusher'
+
+gem 'fog'
