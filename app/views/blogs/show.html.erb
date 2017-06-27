@@ -7,8 +7,8 @@
       <p class="left"><strong>ブログ内容：</strong></p>
       <p class="left"><%= @blog.content %></p>
       <p class="right">
-      　<strong>作成者：</strong><%= @blog.user.name %><br>
-        <strong>作成時間：</strong><%= @blog.created_at.strftime("%y/%m/%d %p %l:%M") %>
+      　<strong>ブログ作成者：</strong><%= @blog.user.name %><br>
+        <strong>ブログ作成時間：</strong><%= @blog.created_at.strftime("%y/%m/%d %p %l:%M") %>
       </p>
     </div>
     <H2>コメント一覧</H2>
