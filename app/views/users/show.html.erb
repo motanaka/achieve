@@ -6,6 +6,8 @@
       <p class="left"><%= @user.name %></p>
       <p class="left"><strong>メール</strong></p>
       <p class="left"><%= @user.email %></p>
+      <p class="left"><strong>パスワード</strong></p>
+      <p class="left"><%= @user.password %></p>
       <p class="right">
         <strong>作成時間:</strong>
         <%= @user.created_at.strftime("%y/%m/%d %p %l:%M") %>
