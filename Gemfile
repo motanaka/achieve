@@ -63,9 +63,10 @@ group :development do
   gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'better_errors'
-  gem 'dotenv-rails'
 end
 
+gem 'dotenv-rails'
+  
 gem 'rails_admin'
 
 gem 'cancan'
