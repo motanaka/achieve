@@ -12,4 +12,10 @@ class UsersController < ApplicationController
 #    @followed.save
   end
   
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path, notice: "ユーザーを削除しました！"
+  end
+  
 end
